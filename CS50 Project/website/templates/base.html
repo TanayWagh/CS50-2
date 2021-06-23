@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href= "../static/css/style.css"> 
+    <link rel="stylesheet" href= "../static/css/navbar.css"> 
+
+    <title>{% block title %}abc{% endblock %}</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <div class="navbar1" id="navbar">
+      {% if user.is_authenticated %}
+        <a class="company" href="https://www.314e.com/">
+          <img src="data:image/png;base64,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" 
+            width="35" height="35"  >
+        </a>
+        <li><a class=" active"><i><b>Welcome, {{user.first_name}}</b></i></a></li>
+        <li><a id="home" href="/">Home</a></li>
+        <li><a id="notes" href="/notes">Notes</a></li>
+        <div class="dropdown" id="CourseProgress" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="dropbtn">Track Progress</button>
+          <div class="dropdown-content">
+            <li><a id="dp" href="/dp">Daily Progress</a></li>
+            <a id="sp" href="/sp">Subjectwise Progress</a>
+            <a id="op" href="/op">Overall Progress</a>
+          </div>
+        </div>
+        <li><a id="videos" href="/videos">Videos</a></li>
+        <p style="float:right"><a class="active" id="logout" href="/logout">Logout</a></p>
+      {% else %}
+        <li><a id="login" href="/login">Login</a></li>
+        <li><a id="signUp" href="/sign-up">Sign Up</a></li>
+      {% endif %}
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="container">{% block content %} {% endblock %}</div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js') }}"
+    ></script>
+  </body>
+</html>
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block title %}Daily Progress{% endblock %} 
+{% block content%}
+    <link rel="stylesheet" href="static/css/dpstyle.css">
+    <script src="../static/dpindex.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <h1 align="center">Daily Tasks</h1>
+    <div class="wrapper">
+      <div class="inputField">
+        <input type="text" placeholder="Add your tasks">
+        <button><i class="fas fa-plus"></i></button>
+      </div>
+      <ul class="tasks">
+        <!-- data are comes from local storage -->
+      </ul>
+      <div class="footer">
+        <span>You have <span class="pendingTasks"></span> pending tasks</span>
+        <button>Clear All</button>
+      </div>
+    </div>
+    {% endblock %}

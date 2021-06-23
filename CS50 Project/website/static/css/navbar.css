@@ -1,0 +1,92 @@
+  ul {
+    list-style-type: none ;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 1;
+    width: 100%;
+    all: initial;
+  }
+  
+  li {
+    float: left; 
+    list-style-type: none
+  }
+
+  li a {
+    display: block;
+    color: rgb(170, 70, 70);
+    text-align: left;
+    padding: 12px 16px;
+    
+  }
+  
+  li a:hover {
+    background-color: rgb(238, 235, 235);
+  }
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #13bd1b;
+  }
+  .dropbtn {
+    color: white;
+    background-color: #333;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #899c7c;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: rgb(190, 30, 30);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+       background-color: #0c0606
+    }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #111;
+  }
+
+  .navbar1 {
+    background-color: #333;
+    padding: 5px 5px;
+  }
+  
+  .navbar1 a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 10px 26px;
+    text-decoration: none;
+  }
+  .company {
+    text-align: center;
+  }

@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block title %}Videos{% endblock %} 
+{% block content%}
+    <h1 align="center">This is Videos Page</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum doloremque fugit eligendi beatae, labore iusto ratione, necessitatibus earum error, nemo ab. Animi adipisci consequatur qui amet ratione obcaecati quos officiis.
+    </p>
+    <head>
+        <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+        <div>
+            To go to the learning page for both the CS and Non-CS Joiners click below - 
+            <ul>
+                <li> <a href="https://wiki.314ecorp.com/en/new-employee-orientation/software-engineer-non-cs">Non-CS Students</a></li>
+                <li> <a href="https://wiki.314ecorp.com/en/new-employee-orientation/software-engineer-cs">CS-Students</a></li>
+            </ul>
+        </div>
+        </header>
+        <main>
+            <p>Check the Videos which you have completed and we will reflect it in your tracker.</p>
+        <ul>
+        <li>
+        <div>
+
+        <input type="checkbox" id="scales" name="scales"
+         checked>
+         <label for="scales">Session 1 - Python by Ashutosh</label>
+         <video class = 'video-js' muted controls poster = "https://content.techgig.com/photo/80100245/8-steps-to-master-python-programming-for-data-science.jpg?88712" data-setup = '{}'
+         <source src = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type = "video/mp4" />
+         <p class="vjs-no-js">
+         To view this video please enable JavaScript, and consider upgrading to a
+         web browser that
+         <a href="https://videojs.com/html5-video-support/" target="_blank"
+           >supports HTML5 video</a
+         >
+       </p>
+        
+        </video>
+
+        </div>
+    </li>
+    <li>
+
+        <div>
+       <input type="checkbox" id="horns" name="horns">
+       <label for="horns">Session 2 - Python by Ashutosh</label>
+        </div>
+    </li>
+                
+    
+        </main>
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    
+    </body>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Subject-wise Progress{% endblock %} 
+{% block content%}
+    <h1 align="center">This is subjectwise progress</h1>
+    <link rel="stylesheet" href="static/css/spcss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
+      <script src="static/spjs.js"></script>
+      <div class="progress">
+        <ul>
+            <li>
+              <i class="fas fa-check"></i>
+              <p>cs50</p>
+
+            </li>
+            <li>
+              <i class="fas fa-check"></i>
+              web intro
+            </li>
+            <li>
+              <i class="fas fa-sync-alt"></i>
+              4 sem cs fundamentals
+            </li>
+            <li>
+              <i class="fas fa-times"></i>
+              networking
+            </li>
+        </ul>
+      </div>
+
+      
+          
+
+      <!-- <div class = "ready"></div> -->
+    <!-- <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
+    </div> -->
+{% endblock %}
+

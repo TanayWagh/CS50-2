@@ -1,0 +1,50 @@
+body{
+  background-image: "https://www.freecodecamp.org/news/content/images/size/w600/2021/06/w-qjCHPZbeXCQ-unsplash.jpg" ;
+  background-size: cover; 
+  background-position:center;
+}
+
+
+
+
+
+.progress{
+  margin: 300px auto
+
+
+
+}
+
+ul{
+  text-align:center;
+}
+
+ul li{
+  display: inline-block;
+  width: 200px;
+  position: relative;
+
+
+}
+
+ul li .fa{
+  background: #ccc;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+ul li .fa::after{
+  content: ' ';
+  background: #ccc;
+  height: 5px;
+  width: 200px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 110px;
+  z-index: -1;
+}
+
